@@ -1,0 +1,31 @@
+{
+  "name": "simple",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.1",
+    "bootstrap": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "react-bootstrap-table-next": "^0.1.12",
+    "react-dom": "^15.5.4",
+    "react-mic": "^12.4.1",
+    "react-router": "^3.0.5",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "server": "node server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  }
+}
