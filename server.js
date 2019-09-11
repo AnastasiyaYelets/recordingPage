@@ -42,7 +42,6 @@ io.on('connection', function(socket){
     io.emit('openRemotely', msg);
   });
   socket.on('sendSample', function(msg){
-    debugger
     io.emit('sendSample', msg);
   });
   socket.on('_ping', function(msg){

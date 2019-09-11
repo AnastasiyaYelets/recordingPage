@@ -90,8 +90,15 @@ class Recording extends PureComponent {
                 blob,
                 id,
             })
-            this.lastChunks = this.queueChunks.length
-        }, CHUNKS_TIME)
+
+            if (this.lastChunks !== 0) {
+                   this.queueSend.push({
+                       blob,
+                       id: 'first'
+                   });
+               }
+               this.lastChunks = this.queueChunks.length;
+           }, CHUNKS_TIME)
     }
 
     _recording = msg => {

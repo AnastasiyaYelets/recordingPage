@@ -84,13 +84,22 @@ class Remote extends Component {
                                 Stop Recording Remotely
                             </button>
                         </div>
-                        <p>
+                        {!isRecording && <p>
                             Sample Link: { this.state.finish && (
                             <a href={ BASE_URL + this.state.finish } download={ 'finish.webm' }  target="_blank">
-                                Скачать
+                                Скачать запись
                             </a>
                         ) }
                         </p>
+                        }
+                        {isRecording && <p>
+                            Sample Link: { this.state.chunks[0] && (
+                            <a href={ BASE_URL + this.state.chunks[0] } download={ 'finish.webm' }  target="_blank">
+                                Скачать фрагмент
+                            </a>
+                        ) }
+                        </p>
+                      }
                     </div>
                 </div>
             </div>
